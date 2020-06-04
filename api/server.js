@@ -10,7 +10,7 @@ server.use(helmet());
 server.use('/api', apiRouter);
 
 server.get("/", (req, res) => {
-  res.status(200).json({ env: process.env.NODE_ENV, port: process.env.PORT });
+  res.status(200).json({ env: process.env.NODE_ENV, port: process.env.PORT, greeting: process.env.GREET });
 });
 
 module.exports = server;
